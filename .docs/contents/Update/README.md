@@ -3,6 +3,10 @@
   
 ###  2020-03-25  
 增加功能：支持读写分离（目前是三种模式：单库、多库、读写分离）   
+> 重大BUG更新：系统登录接口，未对用户软删除进行判断，现已修复  
+> API:  /api/login/GetJwtToken3  
+> Code: await _sysUserInfoServices.Query(d => d.uLoginName == name && d.uLoginPWD == pass && d.tdIsDelete == false);  
+
   
 
 ###  2020-03-18  
